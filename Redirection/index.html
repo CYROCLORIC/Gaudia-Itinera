@@ -8,7 +8,7 @@
         <title>Where are we going?</title>
     
         <style>
-            section
+            form
             {
                 display: flex;
                 justify-content: center;
@@ -33,19 +33,22 @@
     </head>
 
     <body>
-        <section>
-            <button>User</button>
-            <button>Administrator</button>
-        </section>
+        <form>
+            <fieldset>
+                <legend>Where do you want to go?</legend>
+                <button>User</button>
+                <button>Administrator</button>
+            </fieldset>
+        </form>
     </body>
 
     <script>
         document.querySelector(`button:nth-child(1)`).addEventListener(`click`, () => {
-            location.href = `User/user.html`
+            location.href = `Gaudia-Itinera/User/user.html`
         });
 
         document.querySelector(`button:nth-child(2)`).addEventListener(`click`, () => {
-            location.href = `Administrator/admin.html`
+            location.href = `Gaudia-Itinera/administrator/administrator.html`
         });
     </script>
 
