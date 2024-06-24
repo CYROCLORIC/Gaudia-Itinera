@@ -8,6 +8,11 @@
         <title>Where are we going?</title>
     
         <style>
+            body
+            {
+                background-color: #FFE6E6;
+            }
+
             section
             {
                 display: flex;
@@ -16,26 +21,47 @@
                 margin-top: 50vh;
             }
 
+            div
+            {
+                background-color: #7469B6;
+                
+                padding: 20px;
+
+                border-radius: 10px;
+
+                box-shadow: black 0px 1px 10px 0px;
+            }
+
             button
             {
-                color: white;
-                background-color: darkorchid;
+                color: #FFFFFF;
+                background-color: #AD88C6;
 
                 padding: 10px;
-                margin-left: 10px;
-                margin-right: 10px;
+                margin-left: 5px;
+                margin-right: 5px;
 
                 border: none;
+                border-radius: 10px;
 
                 font-weight: bolder;
+
+                transition: 500ms;
+            }
+
+            button:hover
+            {
+                box-shadow: #AD88C6 0px 1px 20px 0px;  
             }
         </style>
     </head>
 
     <body>
         <section>
-            <button>User</button>
-            <button>Administrator</button>
+            <div>
+                <button>User</button>
+                <button>Administrator</button>
+            </div>
         </section>
     </body>
 
