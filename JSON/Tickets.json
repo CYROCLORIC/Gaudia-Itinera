@@ -1,0 +1,29 @@
+{
+    "tickets": [
+        {
+            "type": "Kid's ticket",
+            "price": 0,
+            "description": "Going for/with your kid? It's free!"
+        },
+        {
+            "type": "Normal ticket",
+            "price": 15,
+            "description": "Experience the magic and excitement of Gaudia Itinera! Perfect for all ages, this ticket grants you full access to a day of unforgettable fun."
+        },
+        {
+            "type": "Elderly ticket",
+            "price": 7.50,
+            "description": "Your time is almost over, why pay full price?"
+        },
+        {
+            "type": "Student ticket",
+            "price": 10,
+            "description": "The government already mandates so much money from you, so why not a little less mandating?"
+        },
+        {
+            "type": "Disabled ticket",
+            "price": 7.50,
+            "description": "Since you can't access half the park, might as well pay half the price."
+        }
+    ]
+}

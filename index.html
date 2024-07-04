@@ -24,12 +24,11 @@
             div
             {
                 background-color: #7469B6;
-                
+                box-shadow: black 0px 1px 10px 0px;
+
                 padding: 20px;
 
                 border-radius: 10px;
-
-                box-shadow: black 0px 1px 10px 0px;
             }
 
             button
@@ -37,6 +36,7 @@
                 color: #FFFFFF;
                 background-color: #AD88C6;
 
+                width: 150px;
                 padding: 10px;
                 margin-left: 5px;
                 margin-right: 5px;
@@ -51,7 +51,10 @@
 
             button:hover
             {
-                box-shadow: #AD88C6 0px 1px 20px 0px;  
+                width: 300px;
+                font-size: xx-large;
+                box-shadow: #AD88C6 0px 1px 50px 0px;
+                text-shadow: white 0px 2px 50px;
             }
         </style>
     </head>
@@ -67,11 +70,11 @@
 
     <script>
         document.querySelector(`button:nth-child(1)`).addEventListener(`click`, () => {
-            location.href = `../User/user.html`
+            window.location.href = `../User/user.html`
         });
 
         document.querySelector(`button:nth-child(2)`).addEventListener(`click`, () => {
-            location.href = `../administrator/administrator.html`
+            window.location.href = `../administrator/administrator.html`
         });
     </script>
 
