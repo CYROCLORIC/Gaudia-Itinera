@@ -3,12 +3,12 @@
         {
             "type": "Kid's ticket",
             "price": 0,
-            "description": "Going for/with your kid? It's free!"
+            "description": "Bring that little screamer along to ruin everything!"
         },
         {
             "type": "Normal ticket",
             "price": 15,
-            "description": "Experience the magic and excitement of Gaudia Itinera! Perfect for all ages, this ticket grants you full access to a day of unforgettable fun."
+            "description": "For the normal human being, as in physically, probably not mentally."
         },
         {
             "type": "Elderly ticket",
