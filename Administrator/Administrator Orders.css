@@ -5,7 +5,7 @@ body
     margin: 0px;
 }
 
-nav 
+nav
 {
     background-color: #7469B6;
 
@@ -42,7 +42,7 @@ h1:hover
 }
 
 
-#returnToRedirectionButton
+#returnToRedirectionButton, #orders, #tickets
 {
     color: #FFFFFF;
     background-color: #AD88C6;
@@ -59,11 +59,16 @@ h1:hover
     transition: 500ms;
 }
 
-#returnToRedirectionButton:hover 
+#orders
 {
     box-shadow: #AD88C6 0px 1px 50px 0px;
     text-shadow: white 0px 2px 50px;
+}
 
+#returnToRedirectionButton:hover, #orders:hover, #tickets:hover
+{
+    box-shadow: #AD88C6 0px 1px 50px 0px;
+    text-shadow: white 0px 2px 50px;
     font-size: xx-large;
 }
 

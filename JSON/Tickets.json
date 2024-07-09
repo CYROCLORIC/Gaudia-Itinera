@@ -2,8 +2,8 @@
     "tickets": [
         {
             "type": "Kid's ticket",
-            "price": 0,
-            "description": "Bring that little screamer along to ruin everything!"
+            "price": 20,
+            "description": "Extra annoying person = extra annoying payment!"
         },
         {
             "type": "Normal ticket",
