@@ -11,10 +11,12 @@ document.getElementById(`tickets`).addEventListener(`click`, () => {
 });
 
 document.addEventListener(`DOMContentLoaded`, async () => {
-    const response = await fetch(`../JSON/Tickets.json`);
-    const data = await response.json();
-    
-    data.tickets.forEach(ticket => {
+    const response = await fetch('../JSON/Tickets.json');
+    const jsonData = await response.json();
+    const jsonString = JSON.stringify(jsonData);
+    localStorage.setItem('tickets', jsonString);
+
+    jsonData.tickets.forEach(ticket => {
         const card = document.createElement(`div`);
         card.className = `card`;
         card.innerHTML = `
