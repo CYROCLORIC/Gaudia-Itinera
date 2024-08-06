@@ -18,9 +18,26 @@ nav
     align-items: center;
 }
 
-#returnToRedirectionButton, #orders, #tickets
+#returnToRedirectionButton, #orders, #tickets 
 {
     color: #FFFFFF;
+    background-color: #AD88C6;
+
+    padding: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: bolder;
+
+    transition: 500ms;
+}
+
+#resetStorage
+{
+    color: #FF0000;
     background-color: #AD88C6;
 
     padding: 15px;
@@ -45,6 +62,13 @@ nav
 {
     box-shadow: #AD88C6 0px 1px 50px 0px;
     text-shadow: white 0px 2px 50px;
+    font-size: xx-large;
+}
+
+#resetStorage:hover
+{
+    box-shadow: #AD88C6 0px 1px 50px 0px;
+    text-shadow: #FF0000 0px 2px 50px;
     font-size: xx-large;
 }
 
@@ -91,4 +115,26 @@ nav
     box-shadow: #AD88C6 0px 1px 50px 0px;
     text-shadow: white 0px 2px 50px;
     cursor: default;
+}
+
+.deleteTicketButton
+{
+    color: #FF0000;
+    background-color: #AD88C6;
+
+    padding: 10px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: bolder;
+
+    transition: 500ms;
+}
+
+.deleteTicketButton:hover
+{
+    box-shadow: #AD88C6 0px 1px 50px 0px;
+    text-shadow: #FF0000 0px 2px 50px;
+    font-size: xx-large;
 }
