@@ -1,0 +1,108 @@
+body 
+{
+    background-color: #FFE6E6;
+
+    font-family: Calibri, sans-serif;
+
+    margin: 0px;
+}
+
+nav
+{
+    background-color: #7469B6;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#returnToRedirectionButton, #homeButton, #cartButton
+{
+    color: #FFFFFF;
+    background-color: #AD88C6;
+
+    padding: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: bolder;
+
+    transition: 500ms;
+}
+
+#returnToRedirectionButton:hover, #homeButton:hover, #cartButton:hover
+{
+    box-shadow: #AD88C6 0px 1px 50px 0px;
+    text-shadow: white 0px 2px 50px;
+    font-size: xx-large;
+}
+
+#checkoutContainer
+{
+    color: #FFFFFF;
+    background-color: #7469B6;
+
+    padding: 15px;
+    margin: 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: bolder;
+
+    transition: 500ms;
+}
+
+#checkoutContainer:hover
+{
+    box-shadow: #AD88C6 0px 1px 50px 0px;
+}
+
+.removeItemButton
+{
+    color: #FF0000;
+    background-color: #AD88C6;
+
+    padding: 10px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: bolder;
+
+    transition: 500ms;
+}
+
+.removeItemButton:hover
+{
+    box-shadow: #AD88C6 0px 1px 50px 0px;
+    text-shadow: #FF0000 0px 2px 50px;
+    font-size: xx-large;
+}
+
+#buyButton
+{
+    color: #FFFFFF;
+    background-color: #AD88C6;
+
+    padding: 10px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: bolder;
+
+    transition: 500ms;
+}
+
+#buyButton:hover
+{
+    box-shadow: #AD88C6 0px 1px 50px 0px;
+    text-shadow: #FFFFFF 0px 2px 50px;
+    font-size: xx-large;
+}
