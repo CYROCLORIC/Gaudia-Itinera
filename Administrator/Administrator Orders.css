@@ -1,18 +1,14 @@
 body 
 {
     background-color: #FFE6E6;
-
     font-family: Calibri, sans-serif;
-
     margin: 0px;
 }
 
 nav
 {
     background-color: #7469B6;
-
     padding: 20px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,16 +18,12 @@ h1
 {
     color: #FFFFFF;
     background-color: #AD88C6;
-
     padding: 20px;
     margin-left: 5px;
     margin-right: 5px;
-
     border: none;
     border-radius: 10px;
-
     font-weight: bolder;
-
     transition: 500ms;
 }
 
@@ -39,26 +31,25 @@ h1:hover
 {
     box-shadow: #AD88C6 0px 1px 50px 0px;
     text-shadow: white 0px 2px 50px;
-
     font-size: xx-large;
 }
 
-
-#returnToRedirectionButton, #orders, #tickets
+#returnToRedirectionButton, #orders, #tickets, #resetData
 {
     color: #FFFFFF;
     background-color: #AD88C6;
-
     padding: 15px;
     margin-left: 5px;
     margin-right: 5px;
-
     border: none;
     border-radius: 10px;
-
     font-weight: bolder;
-
     transition: 500ms;
+}
+
+#resetData
+{
+    color: #FF0000;
 }
 
 #orders
@@ -67,14 +58,51 @@ h1:hover
     text-shadow: white 0px 2px 50px;
 }
 
-#returnToRedirectionButton:hover, #orders:hover, #tickets:hover
+#returnToRedirectionButton:hover, #orders:hover, #tickets:hover, #resetData:hover
 {
     box-shadow: #AD88C6 0px 1px 50px 0px;
     text-shadow: white 0px 2px 50px;
     font-size: xx-large;
 }
 
-#ticketContainer
+#resetData:hover
 {
-    display: flex;
+    text-shadow: #FF0000 0px 2px 50px;
+}
+
+.order-item 
+{
+    background-color: #AD88C6;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: #FFFFFF;
+    transition: 500ms;
+}
+
+.order-item:hover 
+{
+    box-shadow: #AD88C6 0px 1px 50px 0px;
+}
+
+.order-item-info 
+{
+    margin: 5px;
+}
+
+#nothing
+{
+    background-color: #AD88C6;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: #FFFFFF;
+    transition: 500ms;
+}
+
+#nothing:hover
+{
+    box-shadow: #AD88C6 0px 1px 30px 0px;
 }
