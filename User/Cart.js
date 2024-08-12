@@ -63,7 +63,14 @@ function removeItemFromCart(index) {
 function processOrder() {
     const orderId = `#${Math.floor(Math.random() * 1000000)}`;
     let orders = JSON.parse(localStorage.getItem('orders')) || [];
-    orders.push(orderId);
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    const order = {
+        orderId: orderId,
+        items: cart
+    };
+
+    orders.push(order);
     localStorage.setItem('orders', JSON.stringify(orders));
     localStorage.removeItem('cart');
     alert(`Your order has been placed. Order ID: ${orderId}`);

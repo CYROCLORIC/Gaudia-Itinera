@@ -84,7 +84,7 @@ function handleEdit(event) {
     const originalText = element.textContent;
     const input = document.createElement('input');
     input.type = 'text';
-    input.value = originalText.includes('€') ? originalText.slice(1) : originalText; // Remove € for price editing
+    input.value = originalText.includes('€') ? originalText.slice(1) : originalText;
     input.className = 'editInput';
 
     element.replaceWith(input);

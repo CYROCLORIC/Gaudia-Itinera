@@ -20,15 +20,24 @@ function displayOrders() {
         return;
     }
 
-    orders.forEach(orderId => {
+    orders.forEach(order => {
         const orderDiv = document.createElement('div');
         orderDiv.className = 'order-item';
         orderDiv.innerHTML = `
-            <p class="order-item-info">Order ID: ${orderId}</p>
+            <h3 class="order-item-info">Order ID: ${order.orderId}</h3>
+            <div class="order-items">
+                ${order.items.map(item => `
+                    <p class="order-item-info">${item.type} (x${item.quantity}) - €${item.price} each</p>
+                `).join('')}
+            </div>
         `;
         orderContainer.appendChild(orderDiv);
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    displayOrders();
+});
 
 document.getElementById('resetData').addEventListener('click', () => {
     localStorage.removeItem('orders');
