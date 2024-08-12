@@ -3,11 +3,11 @@ document.getElementById('returnToRedirectionButton').addEventListener('click', (
 });
 
 document.getElementById('orders').addEventListener('click', () => {
-    window.location.href = 'Administrator Orders.html';
+    window.location.href = 'administratorOrders.html';
 });
 
 document.getElementById('tickets').addEventListener('click', () => {
-    window.location.href = 'Administrator Tickets.html';
+    window.location.href = 'administratorTickets.html';
 });
 
 function displayOrders() {

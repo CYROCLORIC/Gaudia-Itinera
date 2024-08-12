@@ -3,11 +3,11 @@ document.getElementById('returnToRedirectionButton').addEventListener('click', (
 });
 
 document.getElementById('orders').addEventListener('click', () => {
-    window.location.href = 'Administrator Orders.html';
+    window.location.href = 'administratorOrders.html';
 });
 
 document.getElementById('tickets').addEventListener('click', () => {
-    window.location.href = 'Administrator Tickets.html';
+    window.location.href = 'administratorTickets.html';
 });
 
 document.getElementById('resetStorage').addEventListener('click', resetLocalStorageAndFetchData);
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function fetchAndStoreTickets() {
     try {
-        const response = await fetch('../JSON/Tickets.json');
+        const response = await fetch('../JSON/tickets.json');
         const jsonData = await response.json();
         const tickets = jsonData.tickets;
         

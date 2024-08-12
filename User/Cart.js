@@ -1,9 +1,9 @@
 document.getElementById('homeButton').addEventListener('click', () => {
-    window.location.href = 'Home.html';
+    window.location.href = 'home.html';
 });
 
 document.getElementById('cartButton').addEventListener('click', () => {
-    window.location.href = 'Cart.html';
+    window.location.href = 'cart.html';
 });
 
 document.getElementById('returnToRedirectionButton').addEventListener('click', () => {

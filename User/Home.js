@@ -1,9 +1,9 @@
 document.getElementById('homeButton').addEventListener('click', () => {
-    window.location.href = 'Home.html';
+    window.location.href = 'home.html';
 });
 
 document.getElementById('cartButton').addEventListener('click', () => {
-    window.location.href = 'Cart.html';
+    window.location.href = 'cart.html';
 });
 
 document.getElementById('returnToRedirectionButton').addEventListener('click', () => {
@@ -12,7 +12,7 @@ document.getElementById('returnToRedirectionButton').addEventListener('click', (
 
 async function fetchAndSaveTickets() {
     try {
-        const response = await fetch('../JSON/Tickets.json');
+        const response = await fetch('../JSON/tickets.json');
         const jsonData = await response.json();
         localStorage.setItem('tickets', JSON.stringify(jsonData.tickets));
         return jsonData.tickets;
@@ -34,6 +34,7 @@ function addToCart(ticket) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${ticket.type} added to cart!`);
 }
 
 function displayTickets(tickets) {
