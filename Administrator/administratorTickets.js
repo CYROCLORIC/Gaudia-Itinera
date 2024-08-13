@@ -155,7 +155,7 @@ function saveNewTicket() {
     const price = parseFloat(document.getElementById('newTicketPrice').value);
     const description = document.getElementById('newTicketDescription').value;
 
-    if (!type || isNaN(price) || !description) {
+    if (!type || Number.isNaN(price) || !description) {
         alert('Please fill in all fields with valid data.');
         return;
     }
