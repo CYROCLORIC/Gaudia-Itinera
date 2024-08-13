@@ -57,7 +57,7 @@ function removeItemFromCart(index) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    displayCartItems(); 
+    displayCartItems();
 }
 
 function processOrder() {
@@ -67,7 +67,7 @@ function processOrder() {
 
     const order = {
         orderId: orderId,
-        items: cart
+        items: cart,
     };
 
     orders.push(order);

@@ -24,9 +24,9 @@ async function fetchAndSaveTickets() {
 
 function addToCart(ticket) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    
+
     const existingTicket = cart.find(item => item.type === ticket.type);
-    
+
     if (existingTicket) {
         existingTicket.quantity += 1;
     } else {

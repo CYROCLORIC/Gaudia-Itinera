@@ -27,7 +27,7 @@ async function fetchAndStoreTickets() {
         const response = await fetch('../JSON/tickets.json');
         const jsonData = await response.json();
         const tickets = jsonData.tickets;
-        
+
         if (Array.isArray(tickets)) {
             localStorage.setItem('tickets', JSON.stringify(tickets));
             displayTickets(tickets);
@@ -115,7 +115,7 @@ function saveEdit(input, element) {
         tickets[index][key] = newValue;
         element.textContent = newValue;
     }
-    
+
     localStorage.setItem('tickets', JSON.stringify(tickets));
 
     input.replaceWith(element);
