@@ -38,7 +38,7 @@ h1:hover
     font-size: xx-large;
 }
 
-#returnToRedirectionButton, #orders, #tickets, #resetData
+#userButton, #orders, #tickets, #resetData
 {
     color: #FFFFFF;
     background-color: #AD88C6;
@@ -62,7 +62,7 @@ h1:hover
     text-shadow: white 0px 2px 50px;
 }
 
-#returnToRedirectionButton:hover, #orders:hover, #tickets:hover, #resetData:hover
+#userButton:hover, #orders:hover, #tickets:hover, #resetData:hover
 {
     box-shadow: #AD88C6 0px 1px 50px 0px;
     text-shadow: white 0px 2px 50px;

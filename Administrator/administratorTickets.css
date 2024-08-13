@@ -22,7 +22,7 @@ nav
     align-items: center;
 }
 
-#returnToRedirectionButton, #orders, #tickets
+#userButton, #orders, #tickets
 {
     color: #FFFFFF;
     background-color: #AD88C6;
@@ -62,7 +62,7 @@ nav
     text-shadow: white 0px 2px 50px;
 }
 
-#returnToRedirectionButton:hover, #orders:hover, #tickets:hover
+#userButton:hover, #orders:hover, #tickets:hover
 {
     box-shadow: #AD88C6 0px 1px 50px 0px;
     text-shadow: white 0px 2px 50px;

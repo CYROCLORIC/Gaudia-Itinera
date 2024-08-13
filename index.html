@@ -1,84 +1,18 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Where are we going?</title>
-    
-        <style>
-            body
-            {
-                background-color: #FFE6E6;
-                font-family: Calibri, sans-serif;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please wait.....</title>
+</head>
 
-            section
-            {
-                display: flex;
-                justify-content: center;
-
-                margin-top: 50vh;
-            }
-
-            div
-            {
-                background-color: #7469B6;
-                box-shadow: black 0px 1px 10px 0px;
-
-                padding: 20px;
-
-                border-radius: 10px;
-            }
-
-            button
-            {
-                color: #FFFFFF;
-                background-color: #AD88C6;
-
-                width: 150px;
-                padding: 10px;
-                margin-left: 5px;
-                margin-right: 5px;
-
-                border: none;
-                border-radius: 10px;
-
-                font-weight: bolder;
-
-                transition: 500ms;
-            }
-
-            button:hover
-            {
-                width: 300px;
-                font-size: xx-large;
-                box-shadow: #AD88C6 0px 1px 50px 0px;
-                text-shadow: white 0px 2px 50px;
-            }
-        </style>
-    </head>
-
-    <body>
-        <main>
-            <section>
-                <div>
-                    <button>User</button>
-                    <button>Administrator</button>
-                </div>
-            </section>
-        </main>
-    </body>
-
+<body>
     <script>
-        document.querySelector(`button:nth-child(1)`).addEventListener(`click`, () => {
-            window.location.href = `User/home.html`;
+        window.addEventListener("load", () => {
+            window.location.href = "User/home.html";
         });
+    </script>    
+</body>
 
-        document.querySelector(`button:nth-child(2)`).addEventListener(`click`, () => {
-            window.location.href = `Administrator/administratorOrders.html`;
-        });
-    </script>
-
-</html> 
+</html>

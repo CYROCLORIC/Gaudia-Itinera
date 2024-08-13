@@ -1,5 +1,5 @@
-document.getElementById('returnToRedirectionButton').addEventListener('click', () => {
-    window.location.href = '../index.html';
+document.getElementById('userButton').addEventListener('click', () => {
+    window.location.href = '../User/home.html';
 });
 
 document.getElementById('orders').addEventListener('click', () => {

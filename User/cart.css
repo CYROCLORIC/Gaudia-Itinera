@@ -22,7 +22,7 @@ nav
     align-items: center;
 }
 
-#returnToRedirectionButton, #homeButton, #cartButton
+#administratorButton, #homeButton, #cartButton
 {
     color: #FFFFFF;
     background-color: #AD88C6;
@@ -39,7 +39,7 @@ nav
     transition: 500ms;
 }
 
-#returnToRedirectionButton:hover, #homeButton:hover, #cartButton:hover
+#administratorButton:hover, #homeButton:hover, #cartButton:hover
 {
     box-shadow: #AD88C6 0px 1px 50px 0px;
     text-shadow: white 0px 2px 50px;
