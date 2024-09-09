@@ -1,13 +1,13 @@
 document.getElementById('homeButton').addEventListener('click', () => {
-    window.location.href = 'home.html';
+    window.location.href = 'index.html';
 });
 
 document.getElementById('cartButton').addEventListener('click', () => {
-    window.location.href = 'cart.html';
+    window.location.href = 'User/cart.html';
 });
 
 document.getElementById('administratorButton').addEventListener('click', () => {
-    window.location.href = '../Administrator/administratorOrders.html';
+    window.location.href = 'Administrator/administratorOrders.html';
 });
 
 async function fetchAndSaveTickets() {
