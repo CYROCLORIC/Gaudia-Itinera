@@ -1,15 +1,3 @@
-document.getElementById('homeButton').addEventListener('click', () => {
-    window.location.href = 'index.html';
-});
-
-document.getElementById('cartButton').addEventListener('click', () => {
-    window.location.href = 'User/cart.html';
-});
-
-document.getElementById('administratorButton').addEventListener('click', () => {
-    window.location.href = 'Administrator/administratorOrders.html';
-});
-
 async function fetchAndSaveTickets() {
     try {
         const response = await fetch('../JSON/tickets.json');

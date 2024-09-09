@@ -1,15 +1,3 @@
-document.getElementById('homeButton').addEventListener('click', () => {
-    window.location.href = '../index.html';
-});
-
-document.getElementById('cartButton').addEventListener('click', () => {
-    window.location.href = 'cart.html';
-});
-
-document.getElementById('administratorButton').addEventListener('click', () => {
-    window.location.href = '../Administrator/administratorOrders.html';
-});
-
 function displayCartItems() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const checkoutContainer = document.getElementById('checkoutContainer');

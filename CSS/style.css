@@ -483,3 +483,9 @@ footer
     text-shadow: #FF0000 0px 2px 50px;
     font-size: xx-large;
 }
+
+a
+{
+    color: white;
+    text-decoration: none;
+}

@@ -1,15 +1,3 @@
-document.getElementById('userButton').addEventListener('click', () => {
-    window.location.href = '../index.html';
-});
-
-document.getElementById('orders').addEventListener('click', () => {
-    window.location.href = 'administratorOrders.html';
-});
-
-document.getElementById('tickets').addEventListener('click', () => {
-    window.location.href = 'administratorTickets.html';
-});
-
 function displayOrders() {
     const orders = JSON.parse(localStorage.getItem('orders')) || [];
     const orderContainer = document.getElementById('orderContainer');
