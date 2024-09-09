@@ -34,7 +34,6 @@ function addToCart(ticket) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${ticket.type} added to cart!`);
 }
 
 function displayTickets(tickets) {

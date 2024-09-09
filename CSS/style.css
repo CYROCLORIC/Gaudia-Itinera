@@ -36,7 +36,7 @@ nav
 
     font-weight: bolder;
 
-    transition: 500ms;
+    transition: 250ms;
 }
 
 #administratorButton:hover, #homeButton:hover, #cartButton:hover
@@ -65,7 +65,7 @@ nav
 
     font-weight: bolder;
 
-    transition: 500ms;
+    transition: 250ms;
 }
 
 #welcomeInformation:hover
@@ -78,7 +78,7 @@ img
     height: 100%;
     border-radius: 10px;
     margin-left: 5px;
-    transition: 500ms;
+    transition: 250ms;
 }
 
 img:hover
@@ -106,7 +106,7 @@ img:hover
 
     font-weight: bolder;
 
-    transition: 500ms;
+    transition: 250ms;
 }
 
 .card:hover
@@ -121,7 +121,7 @@ img:hover
     padding: 10px;
 
     border-radius: 5px;
-    transition: 500ms;
+    transition: 250ms;
 }
 
 .cardInformation:hover
@@ -143,7 +143,7 @@ img:hover
 
     font-weight: bolder;
 
-    transition: 500ms;
+    transition: 250ms;
 }
 
 .addToCartButton:hover
@@ -151,6 +151,11 @@ img:hover
     box-shadow: #AD88C6 0px 1px 50px 0px;
     text-shadow: #FFFFFF 0px 2px 50px;
     font-size: xx-large;
+}
+
+.addToCartButton:active
+{
+    color: #7469B6;
 }
 
 footer
@@ -178,7 +183,7 @@ footer
 
     font-weight: bolder;
 
-    transition: 500ms;  
+    transition: 250ms;  
 }
 
 .socials:nth-child(1):hover
@@ -202,7 +207,7 @@ footer
 
     font-weight: bolder;
 
-    transition: 500ms;  
+    transition: 250ms;  
 }
 
 .socials:nth-child(2):hover
@@ -226,7 +231,7 @@ footer
 
     font-weight: bolder;
 
-    transition: 500ms;  
+    transition: 250ms;  
 }
 
 .socials:nth-child(3):hover
@@ -250,7 +255,7 @@ footer
 
     font-weight: bolder;
 
-    transition: 500ms;  
+    transition: 250ms;  
 }
 
 .socials:nth-child(4):hover
@@ -274,7 +279,7 @@ footer
 
     font-weight: bolder;
 
-    transition: 500ms;  
+    transition: 250ms;  
 }
 
 .socials:nth-child(5):hover
@@ -293,10 +298,188 @@ footer
     flex-direction: row;
     font-weight: bolder;
     text-align: end;
-    transition: 500ms; 
+    transition: 250ms;
 }
 
 .footerInformationSections
 {
     margin: 10px;
+}
+
+#checkoutContainer
+{
+    color: #FFFFFF;
+    background-color: #7469B6;
+
+    padding: 15px;
+    margin: 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: bolder;
+
+    transition: 250ms;
+}
+
+#checkoutContainer:hover
+{
+    box-shadow: #AD88C6 0px 1px 50px 0px;
+}
+
+.removeItemButton
+{
+    color: #FF0000;
+    background-color: #AD88C6;
+
+    padding: 10px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: bolder;
+
+    transition: 250ms;
+}
+
+.removeItemButton:hover
+{
+    box-shadow: #AD88C6 0px 1px 50px 0px;
+    text-shadow: #FF0000 0px 2px 50px;
+    font-size: xx-large;
+}
+
+#buyButton
+{
+    color: #FFFFFF;
+    background-color: #AD88C6;
+
+    padding: 10px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: bolder;
+
+    transition: 250ms;
+}
+
+#buyButton:hover
+{
+    box-shadow: #AD88C6 0px 1px 50px 0px;
+    text-shadow: #FFFFFF 0px 2px 50px;
+    font-size: xx-large;
+}
+
+#userButton, #orders, #tickets, #resetData
+{
+    color: #FFFFFF;
+    background-color: #AD88C6;
+    padding: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    transition: 250ms;
+}
+
+#resetData
+{
+    color: #FF0000;
+}
+
+#userButton:hover, #orders:hover, #tickets:hover, #resetData:hover
+{
+    box-shadow: #AD88C6 0px 1px 50px 0px;
+    text-shadow: white 0px 2px 50px;
+    font-size: xx-large;
+}
+
+#resetData:hover
+{
+    text-shadow: #FF0000 0px 2px 50px;
+}
+
+.order-item 
+{
+    background-color: #AD88C6;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: #FFFFFF;
+    transition: 250ms;
+}
+
+.order-item:hover 
+{
+    box-shadow: #AD88C6 0px 1px 50px 0px;
+}
+
+.order-item-info 
+{
+    margin: 5px;
+}
+
+#nothing
+{
+    background-color: #AD88C6;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: #FFFFFF;
+    transition: 250ms;
+}
+
+#nothing:hover
+{
+    box-shadow: #AD88C6 0px 1px 30px 0px;
+}
+
+.deleteTicketButton
+{
+    color: #FF0000;
+    background-color: #AD88C6;
+
+    padding: 10px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: bolder;
+
+    transition: 250ms;
+}
+
+.deleteTicketButton:hover
+{
+    box-shadow: #AD88C6 0px 1px 50px 0px;
+    text-shadow: #FF0000 0px 2px 50px;
+    font-size: xx-large;
+}
+
+#resetStorage
+{
+    color: #FF0000;
+    background-color: #AD88C6;
+
+    padding: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: bolder;
+
+    transition: 250ms;
+}
+
+#resetStorage:hover
+{
+    box-shadow: #AD88C6 0px 1px 50px 0px;
+    text-shadow: #FF0000 0px 2px 50px;
+    font-size: xx-large;
 }
