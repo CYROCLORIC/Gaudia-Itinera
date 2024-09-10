@@ -1,14 +1,86 @@
-document.getElementById('resetStorage').addEventListener('click', resetLocalStorageAndFetchData);
+function displayOrders() {
+    const orders = JSON.parse(localStorage.getItem('orders')) || [];
+    const orderContainer = document.getElementById('orderContainer');
+    if (!orderContainer) return;
+    orderContainer.innerHTML = '';
+
+    if (orders.length === 0) {
+        orderContainer.innerHTML = '<p id="nothing">No orders have been placed.</p>';
+        return;
+    }
+
+    orders.forEach(order => {
+        const orderDiv = document.createElement('div');
+        orderDiv.className = 'order-item';
+        const totalPrice = order.totalPrice ? `Total: €${order.totalPrice.toFixed(2)}` : 'Total: Not available';
+        orderDiv.innerHTML = `
+            <h3 class="order-item-info">Order ID: ${order.orderId}</h3>
+            <div class="order-items">
+                ${order.items.map(item => `
+                    <p class="order-item-info">${item.type} (x${item.quantity}) - €${item.price} each</p>
+                `).join('')}
+            </div>
+            <p class="order-total-price">${totalPrice}</p>
+        `;
+        orderContainer.appendChild(orderDiv);
+    });
+}
 
 document.addEventListener('DOMContentLoaded', async () => {
-    let tickets = JSON.parse(localStorage.getItem('tickets'));
+    const orderContainer = document.getElementById('orderContainer');
+    if (orderContainer) {
+        displayOrders();
+    }
 
-    if (!Array.isArray(tickets)) {
-        await fetchAndStoreTickets();
-    } else {
-        displayTickets(tickets);
+    const ticketContainer = document.getElementById('ticketContainer');
+    if (ticketContainer) {
+        let tickets = JSON.parse(localStorage.getItem('tickets'));
+        if (!Array.isArray(tickets)) {
+            await fetchAndStoreTickets();
+        } else {
+            displayTickets(tickets);
+        }
     }
 });
+
+document.getElementById('resetData')?.addEventListener('click', () => {
+    localStorage.removeItem('orders');
+    displayOrders();
+});
+
+document.getElementById('resetStorage')?.addEventListener('click', resetLocalStorageAndFetchData);
+
+function displayTickets(tickets) {
+    const ticketContainer = document.getElementById('ticketContainer');
+    if (!ticketContainer) return;
+    ticketContainer.innerHTML = '';
+
+    tickets.forEach((ticket, index) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+            <p class="cardInformation" data-index="${index}" data-key="type">${ticket.type}</p>
+            <p class="cardInformation" data-index="${index}" data-key="price">€${ticket.price}</p>
+            <p class="cardInformation" data-index="${index}" data-key="description">${ticket.description}</p>
+            <button class="deleteTicketButton" data-index="${index}">DELETE</button>
+        `;
+        ticketContainer.appendChild(card);
+    });
+
+    const addCard = document.createElement('div');
+    addCard.className = 'card';
+    addCard.innerHTML = `<p class="addCardText">Add New Ticket</p>`;
+    addCard.addEventListener('click', showAddTicketForm);
+    ticketContainer.appendChild(addCard);
+
+    document.querySelectorAll('.cardInformation').forEach(element => {
+        element.addEventListener('click', handleEdit);
+    });
+
+    document.querySelectorAll('.deleteTicketButton').forEach(button => {
+        button.addEventListener('click', handleDelete);
+    });
+}
 
 async function fetchAndStoreTickets() {
     try {
@@ -32,41 +104,6 @@ async function resetLocalStorageAndFetchData() {
     await fetchAndStoreTickets();
 }
 
-function displayTickets(tickets) {
-    const ticketContainer = document.getElementById('ticketContainer');
-    ticketContainer.innerHTML = '';
-
-    tickets.forEach((ticket, index) => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-            <p class="cardInformation" data-index="${index}" data-key="type">${ticket.type}</p>
-            <p class="cardInformation" data-index="${index}" data-key="price">€${ticket.price}</p>
-            <p class="cardInformation" data-index="${index}" data-key="description">${ticket.description}</p>
-            <button class="deleteTicketButton" data-index="${index}">DELETE</button>
-        `;
-        ticketContainer.appendChild(card);
-    });
-
-    const addCard = document.createElement('div');
-    addCard.className = 'card';
-    addCard.innerHTML = `
-        <p class="addCardText">Add New Ticket</p>
-    `;
-    addCard.addEventListener('click', () => {
-        showAddTicketForm();
-    });
-    ticketContainer.appendChild(addCard);
-
-    document.querySelectorAll('.cardInformation').forEach(element => {
-        element.addEventListener('click', handleEdit);
-    });
-
-    document.querySelectorAll('.deleteTicketButton').forEach(button => {
-        button.addEventListener('click', handleDelete);
-    });
-}
-
 function handleEdit(event) {
     const element = event.target;
     const originalText = element.textContent;
@@ -76,7 +113,6 @@ function handleEdit(event) {
     input.className = 'editInput';
 
     element.replaceWith(input);
-
     input.focus();
 
     input.addEventListener('blur', () => {
@@ -105,7 +141,6 @@ function saveEdit(input, element) {
     }
 
     localStorage.setItem('tickets', JSON.stringify(tickets));
-
     input.replaceWith(element);
 }
 
@@ -116,7 +151,6 @@ function showAddTicketForm() {
         <input type="text" id="newTicketPrice" placeholder="Ticket Price">
         <input type="text" id="newTicketDescription" placeholder="Ticket Description">
         <button id="saveNewTicket">Save</button>
-        <button id="cancelNewTicket">Cancel</button>
     `;
 
     const saveButton = document.getElementById('saveNewTicket');
@@ -130,11 +164,6 @@ function showAddTicketForm() {
                 saveNewTicket();
             }
         });
-    });
-
-    cancelButton.addEventListener('click', () => {
-        const tickets = JSON.parse(localStorage.getItem('tickets'));
-        displayTickets(tickets);
     });
 }
 
@@ -153,7 +182,6 @@ function saveNewTicket() {
     let tickets = JSON.parse(localStorage.getItem('tickets'));
     tickets.push(newTicket);
     localStorage.setItem('tickets', JSON.stringify(tickets));
-
     displayTickets(tickets);
 }
 
@@ -163,6 +191,29 @@ function handleDelete(event) {
     let tickets = JSON.parse(localStorage.getItem('tickets'));
     tickets.splice(index, 1);
     localStorage.setItem('tickets', JSON.stringify(tickets));
-
     displayTickets(tickets);
 }
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const orderContainer = document.getElementById('orderContainer');
+    if (orderContainer) {
+        displayOrders();
+    }
+
+    const ticketContainer = document.getElementById('ticketContainer');
+    if (ticketContainer) {
+        let tickets = JSON.parse(localStorage.getItem('tickets'));
+        if (!Array.isArray(tickets)) {
+            await fetchAndStoreTickets();
+        } else {
+            displayTickets(tickets);
+        }
+    }
+});
+
+document.getElementById('resetData')?.addEventListener('click', () => {
+    localStorage.removeItem('orders');
+    displayOrders();
+});
+
+document.getElementById('resetStorage')?.addEventListener('click', resetLocalStorageAndFetchData);

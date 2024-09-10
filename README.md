@@ -9,6 +9,8 @@ On the orders page you'll be able to see how many orders have been made on the w
 
 On the user page you'll be able to buy tickets and view them in your shopping cart, upon buying them, it will be registered in the orders page of the administrator site.  
 
+If you delete all existing tickets and return to the homepage the ticket's default JSON will load.  
+
 ## How do I install and run the project? (GitHub version)  
 
 When you're in the repository, press the button that says `Code`.  
