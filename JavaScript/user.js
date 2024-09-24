@@ -21,6 +21,8 @@ function addToCart(ticket) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
+
+    updateCartAmount();
 }
 
 function displayTickets(tickets) {
@@ -105,6 +107,7 @@ function removeItemFromCart(index) {
 
     localStorage.setItem('cart', JSON.stringify(cart));
     displayCartItems();
+    updateCartAmount();
 }
 
 function processOrder() {
@@ -132,6 +135,18 @@ function processOrder() {
     displayCartItems(`Your order has been placed. Order ID: ${orderId}`);
 }
 
+function updateCartAmount() {
+    const cartAmountElement = document.getElementById('cartAmount');
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    if (cart.length === 0) {
+        cartAmountElement.textContent = "There are no items in your cart! (Start buying!)";
+    } else {
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        cartAmountElement.textContent = `Items in cart: ${totalItems}`;
+    }
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     const ticketContainer = document.getElementById('ticketContainer');
     if (ticketContainer) {
@@ -146,4 +161,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (checkoutContainer) {
         displayCartItems();
     }
+
+    updateCartAmount();
 });

@@ -22,7 +22,7 @@ nav
     align-items: center;
 }
 
-#administratorButton, #homeButton, #cartButton, #availableTickets
+#administratorButton, #homeButton, #cartButton, #availableTickets, #cartAmount
 {
     color: #FFFFFF;
     background-color: #AD88C6;
@@ -37,6 +37,16 @@ nav
     font-weight: bolder;
 
     transition: 250ms;
+}
+
+#cartAmount
+{
+    border-radius: 500px;
+}
+
+#cartAmount:hover
+{
+    cursor: default;
 }
 
 #availableTickets
